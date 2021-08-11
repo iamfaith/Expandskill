@@ -48,8 +48,8 @@ public class FloatingButtonService extends Service {
         layoutParams.format = PixelFormat.RGBA_8888;
         layoutParams.gravity = Gravity.LEFT | Gravity.TOP;
         layoutParams.flags = WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
-        layoutParams.width = 200;
-        layoutParams.height = 200;
+        layoutParams.width = 100;
+        layoutParams.height = 100;
         layoutParams.x = 300;
         layoutParams.y = 300;
 //        layoutParams.alpha = 120;
@@ -69,7 +69,7 @@ public class FloatingButtonService extends Service {
     private void showFloatingWindow() {
                 if (Settings.canDrawOverlays(this)) {
             button = new Button(getApplicationContext());
-            button.setText("飞");
+            button.setText("2");
 //            button.setTextAppearance(R.style.button1);
             button.setBackgroundColor(Color.argb(120,0,255,0));
             windowManager.addView(button, layoutParams);
@@ -89,7 +89,7 @@ public class FloatingButtonService extends Service {
             @Override
             public void run() {
                 char value = '1';
-                String path = "http://192.168.0.109:9797/?skill="+value;
+                String path = "http://192.168.31.226:8080/shoot";
                 try {
                     URL url = new URL(path);
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();

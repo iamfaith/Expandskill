@@ -1,3 +1,7 @@
+./gradlew assembleDebug
+
+sdkmanager --sdk_root=$ANDROID_SDK_ROOT --licenses
+sdkmanager --sdk_root=$ANDROID_SDK_ROOT "build-tools;27.0.3"
 # Expandskill
 王者外挂工具
 
