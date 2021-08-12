@@ -89,7 +89,7 @@ public class FloatingButtonService extends Service {
             @Override
             public void run() {
                 char value = '1';
-                String path = "http://192.168.31.226:8080/shoot";
+                String path = "http://127.0.0.1:8080/shoot";
                 try {
                     URL url = new URL(path);
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
